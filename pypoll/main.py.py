@@ -43,3 +43,15 @@ for candidate, percentage, votes in results:
 print("------------------------------")
 print(f"Winner: {winner}")
 print("------------------------------")
+
+with open("analysis/text.txt","w") as txt_file:
+    txt_file.write(f"Election Results\n"
+                   f"------------------------------\n"
+                   f"Total Votes: {total_votes}\n"
+                   f"------------------------------\n")
+    for candidate, percentage, votes in results:
+        txt_file.write(f"{candidate}: {percentage:.3f}% ({votes})\n")
+
+    txt_file.write(f"------------------------------\n"
+                  f"Winner: {winner}\n"
+                  f"------------------------------\n" )

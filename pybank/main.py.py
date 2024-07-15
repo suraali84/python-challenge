@@ -45,3 +45,13 @@ print(f"Total: ${net_total}")
 print(f"Average Change: ${average_change:.2f}")
 print(f"Greatest Increase in Profits: {months[increase_index + 1]} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {months[decrease_index + 1]} (${greatest_decrease})")
+
+with open("analysis/text.txt","w") as txt_file:
+    txt_file.write(f"Financial Analysis\n"
+                f"-----------------------\n"
+                 f"Total Months: {total_months}\n"
+                      f"Total: ${net_total}\n"
+                          f"Average Change: ${average_change:.2f}\n"
+                           f"Greatest Increase in Profits: {months[increase_index + 1]} (${greatest_increase})\n"
+                              f"Greatest Decrease in Profits: {months[decrease_index + 1]} (${greatest_decrease})\n"   )
+    
